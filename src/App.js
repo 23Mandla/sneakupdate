@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Count from "./components/Count/Count";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import bg from "./components/assets/images/bg-img.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid grid-cols-2 w-screen h-screen">
+      <div className="h-full">
+        <Header />
+        <Main/>
+      </div>
+      <div
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <Count />
+      </div>
     </div>
   );
 }
