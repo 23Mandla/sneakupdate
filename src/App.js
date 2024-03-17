@@ -10,7 +10,7 @@ function App() {
         <Header />
         <Main/>
       </div>
-      <div
+      <div className="bg-black"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundRepeat: "no-repeat",
